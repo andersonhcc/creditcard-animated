@@ -1,14 +1,21 @@
 import styled from "styled-components/native";
+import { Dimensions } from "react-native";
+
+const {height} = Dimensions.get('window');
 
 export const SafeView = styled.SafeAreaView`
   flex: 1;
   background-color: #4e455e10 ; //opacity 10%
+`;
 
+export const ScrollView = styled.ScrollView`
+  width: 100%;
+  height: 100%;
 `;
 
 export const Container = styled.View`
   width: 100%;
-  height: 100%;
+  height: ${height}px;
   flex: 1;
   justify-content: space-between;
   align-items: center;
@@ -45,6 +52,7 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
   border-radius: 55px;
+  margin-bottom: 100px;
 `;
 
 export const TextButton = styled.Text`
